@@ -31,8 +31,7 @@ class TodoPage extends ConsumerWidget {
                   ),
                   ElevatedButton(
                       onPressed: () => {
-                            todoModel
-                                .addTodoRepository(_contentsController.text),
+                            todoModel.addTodo(_contentsController.text),
                             _contentsController.text = ''
                           },
                       child: Text('追加')),
@@ -96,6 +95,5 @@ class TodoPage extends ConsumerWidget {
 
   Widget buildButtons(BuildContext context, Todo todo, TodoModel todoModel) =>
       ElevatedButton(
-          onPressed: () => {todoModel.deleteTodoRepository(todo)},
-          child: Text('削除'));
+          onPressed: () => {todoModel.deleteTodo(todo)}, child: Text('削除'));
 }

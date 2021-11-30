@@ -10,11 +10,11 @@ final todoModelProvider = ChangeNotifierProvider<TodoModel>(
 class TodoModel extends ChangeNotifier {
   TodoRepository todoRepository = TodoRepository();
 
-  void addTodoRepository(String contents) {
-    todoRepository.addTodo(contents);
+  void addTodo(String contents) {
+    todoRepository.addTodoRepository(contents);
   }
 
-  void deleteTodoRepository(Todo todo) {
-    todoRepository.deleteTodo(todo);
+  void deleteTodo(Todo todo) {
+    todoRepository.deleteTodoRepository(todo);
   }
 }
